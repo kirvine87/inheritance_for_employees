@@ -23,16 +23,11 @@ public abstract class Employee {
     public double getSalary() {
         return salary;
     }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
+    
 
     public void raiseSalary(double increment){
-        if (increment < 0){
-
-        } else {
-            setSalary(salary + increment);
+        if (increment > 0) {
+            this.salary += increment;
         }
     }
 
@@ -41,7 +36,7 @@ public abstract class Employee {
     }
 
     public void setName(String name) {
-        if (name != null && name != ""){
+        if (name != null && !name.equals("")){
             this.name = name;
         }
     }
